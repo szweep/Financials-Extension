@@ -184,7 +184,7 @@ class Yahoo(BaseClient):
                 return 'Yahoo.getRealtime({}, {}) - handleCookiesAndConsent'.format(ticker, datacode)
 
             try:
-                r = r'\bcrumb=([^"]{11})"'
+                r = r'\bcrumb=([^"]{13})"'
                 pattern = re.compile(r)
                 match = pattern.search(text)
                 if match:
